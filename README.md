@@ -1,4 +1,4 @@
-### Les redirections de fd dans pipex  
+### Les redirections de fds dans pipex  
 *(Attention, c'est juste dans mon pipex, je ne prétends pas savoir comment ça devrait être !)* 
 
 #### C'est quoi un fd ?
