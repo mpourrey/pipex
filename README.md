@@ -53,3 +53,9 @@ Pour chaque commande :
       - J'exécute.
       - J'exit.
 #
+
+#### Explications : 
+A chaque commande, je crée un pipe et je lance un nouveau processus enfant. 
+Or, j'ai déjà mis dans le fd0 la lecture du pipe précédent. Ou bien, si c'est le cas de la première commande, l'infile.  
+L'idée c'est qu'au lancement de ma commande, son fd0 soit déjà set par le parent et qu'elle en hérite. Son fd1 est set vers le pipe (que le parent set en fd0 du prochain processus), ou bien, si c'est la dernière commande, vers l'outfile.
+
